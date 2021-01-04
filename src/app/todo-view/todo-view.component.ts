@@ -9,8 +9,8 @@ import { ITodo } from '../app.component';
 })
 export class TodoViewComponent {
   @Input() public todos: Array<ITodo>;
-  @Input() public toggleDone: Function;
-  @Input() public removeTodo: Function;
+  @Input() public toggleDone: (todo: ITodo) => void;
+  @Input() public removeTodo: (todo: ITodo) => void;
 
   constructor() {
     this.todos = [];
