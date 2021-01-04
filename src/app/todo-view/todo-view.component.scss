@@ -1,0 +1,11 @@
+@import "../app.component.scss";
+
+.done {
+  text-decoration: line-through;
+}
+
+.todo-title {
+  text-transform: capitalize;
+  margin-right: 10px;
+  font-size: 18px;
+}

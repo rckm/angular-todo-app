@@ -1,0 +1,5 @@
+<span class="todo-title" [ngClass]="{ done: todo.done }">{{ todo.title }}</span>
+<button class="btn primary" (click)="toggleDone(todo)">
+  {{ !todo.done ? "Done" : "Undone" }}
+</button>
+<button class="btn secondary" (click)="removeTodo(todo)">Remove</button>
