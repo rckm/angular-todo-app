@@ -7,14 +7,11 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  public title = 'angular-example';
   public todos: Array<ITodo> = [];
   public todoTitle = new FormControl(
     '',
-    Validators.compose([
-      Validators.minLength(3),
-      Validators.maxLength(60),
-      Validators.required,
-    ])
+    Validators.compose([Validators.minLength(3), Validators.maxLength(60), Validators.required])
   );
 
   public addTodo() {

@@ -3,24 +3,15 @@
 
   <input class="todo-input" type="text" [formControl]="todoTitle" />
 
-  <button
-    class="btn primary"
-    [disabled]="todoTitle.invalid"
-    (click)="addTodo()"
-  >
-    Add
-  </button>
+  <button class="btn primary" [disabled]="todoTitle.invalid" (click)="addTodo()">Add</button>
 
   <p *ngIf="todos.length === 0">There is no TODOS!</p>
 
-  <ul class="todo-list" *ngIf="todos.length !== 0">
-    <li *ngFor="let todo of todos">
-      <app-todo-view
-        [todos]="todos"
-        [todo]="todo"
-        [toggleDone]="toggleDone"
-        [removeTodo]="removeTodo"
-      ></app-todo-view>
-    </li>
-  </ul>
+  <app-todo-view
+    [todos]="todos"
+    [toggleDone]="toggleDone"
+    [removeTodo]="removeTodo"
+  ></app-todo-view>
+
+  <small>{{ title }}</small>
 </div>
